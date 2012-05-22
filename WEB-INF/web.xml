@@ -1,0 +1,27 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+  <display-name>Welcome to Jython</display-name>
+  <description>
+     Welcome to Jython
+  </description>
+
+  <servlet>
+    <servlet-name>org.python.util.PyServlet</servlet-name>
+    <servlet-class>
+       org.python.util.PyServlet
+    </servlet-class>
+    <init-param>
+       <param-name>debug</param-name>
+       <param-value>1</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>org.python.util.PyServlet</servlet-name>
+    <url-pattern>*.py</url-pattern>
+  </servlet-mapping>
+</web-app>
+
